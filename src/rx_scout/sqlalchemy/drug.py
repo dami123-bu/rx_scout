@@ -22,3 +22,4 @@ class Drug(Base):
     side_effects: Mapped[list[str]] = mapped_column(ARRAY(Text), nullable=False)
 
     approvals = relationship("DrugDiseaseApproval", back_populates="drug")
+    side_effect_entries = relationship("SideEffect", back_populates="drug")
