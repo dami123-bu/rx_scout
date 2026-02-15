@@ -3,6 +3,7 @@ import pytest
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from rx_scout.db.base import Base
+from rx_scout.sqlalchemy import *  # noqa: F401, F403
 
 TEST_DATABASE_URL = "postgresql://rxscout:rxscout_dev@localhost:5438/rxscout_test"
 
